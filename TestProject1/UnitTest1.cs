@@ -20,5 +20,35 @@ namespace TestProject1
 
             Assert.Equal(expected, observed);
         }
+
+        [Fact]
+        public void Expo4to3Is64()
+        {
+            // arrange
+            var calc = new Calculator();
+            double value1 = 4;
+            double value2 = 3;
+
+            // act
+            var observed = calc.Expo(value1, value2);
+
+            // assert
+            Assert.Equal(observed, 64);
+        }
+
+        [Fact]
+        public void Expo2to8Is256()
+        {
+            // arrange
+            var calc = new Calculator();
+            double value1 = 2;
+            double value2 = 8;
+
+            // act
+            var observed = calc.Expo(value1, value2);
+
+            // assert
+            Assert.Equal(observed, 256);
+        }
     }
 }
